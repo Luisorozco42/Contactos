@@ -19,6 +19,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Email</th>
                     <th scope="col">Telefono</th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,6 +28,12 @@
                     <td th:text="${contacto.getNombre() + ' ' + contacto.getApellido()}"></td>
                     <td th:text="${contacto.getEmail()}"></td>
                     <td th:text="${contacto.getTelefono()}"></td>
+                    <td class="text-center">
+                        <div class="container">
+                            <a th:href="@{/editar/{id}(id=${contacto.getIdContacto()})}" class="btn btn-warning btn-sm me-3">Editar</a>
+                            <a th:href="@{/eliminar/{id}(id=${contacto.getIdContacto()})}" class="btn btn-danger btn-sm me-3">Eliminar</a>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
