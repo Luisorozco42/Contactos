@@ -28,7 +28,7 @@ public class ContactoServicio implements IContactoServicio {
     }
 
     @Override
-    public void eliminarContacto(Integer id) {
-        contactoRepositorio.deleteById(id);
+    public void eliminarContacto(Contacto contacto) {
+        contactoRepositorio.delete(contacto);
     }
 }
